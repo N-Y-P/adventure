@@ -30,11 +30,11 @@ public class DialogueManager : MonoBehaviour
         foreach (string line in lines)
         {
             string[] fields = line.Split(',');
-            if (fields.Length > 3) // 간단한 유효성 검사
+            if (fields.Length > 3) 
             {
                 DialogueData dialogueData = new DialogueData();
 
-                // NPCID, DialogID, NextID를 안전하게 파싱
+                // 예시?
                 int.TryParse(fields[0], out dialogueData.NPCID);
                 int.TryParse(fields[1], out dialogueData.DialogID);
                 int.TryParse(fields[2], out dialogueData.NextID);
@@ -47,8 +47,8 @@ public class DialogueManager : MonoBehaviour
     }
     public DialogueData GetDialogueByNpcId(int npcId, int nextId)
     {
-        // 대화 데이터 목록에서 해당 npcId와 nextId에 일치하는 대화 데이터를 찾아 반환합니다.
-        // 여기서는 dialogueDatas가 모든 대화 데이터를 담고 있는 컬렉션이라고 가정합니다.
+        // 대화 데이터 목록에서 해당 npcId와 nextId에 일치하는 대화 데이터를 찾아 반환
+        // dialogueDatas가 모든 대화 데이터를 담고 있는 컬렉션이라고 가정
         foreach (var dialogue in dialogues)
         {
             if (dialogue.NPCID == npcId && dialogue.NextID == nextId)

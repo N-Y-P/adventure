@@ -7,10 +7,9 @@ public class DialogueUIManager : MonoBehaviour
     public Transform dialogueParent; // 대화창이 생성될 부모 객체, Unity 에디터에서 할당
 
     private GameObject currentDialogueInstance; // 현재 활성화된 대화창 인스턴스
-    private TMP_Text nameText; // NPC의 이름을 표시할 TextMeshPro 컴포넌트
-    private TMP_Text dialogueText; // 대화 내용을 표시할 TextMeshPro 컴포넌트
+    private TMP_Text nameText; // NPC의 이름을 표시 컴포넌트
+    private TMP_Text dialogueText; // 대화 내용을 표시 컴포넌트
 
-    // 대화창을 표시하는 메서드, npcName과 dialogue는 표시할 NPC 이름과 대화 내용입니다.
     public void ShowDialogue(string npcName, string dialogue)
     {
 
